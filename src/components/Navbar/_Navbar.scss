@@ -1,0 +1,34 @@
+@import "~@/styles/variables.scss";
+
+.Navbar {
+  height: calc(100% - 0.5px);
+  background-color: $topNavBgColor;
+  padding: 0;
+  overflow: hidden;
+
+  .nav_logo {
+    height: 100%;
+  }
+
+  .nav_main {
+    height: 100%;
+  }
+
+  .nav_search {
+    height: 100%;
+    .el-input {
+      width: 200px;
+    }
+  }
+
+  // Support
+
+  // Module
+  & {
+    //
+  }
+
+  // Facets
+
+  // States
+}

@@ -1,0 +1,29 @@
+$topNavBarHeight: 60px;
+$bottomFootHeight: 60px;
+$topNavBgColor: #545c64;
+$bottomFootBgColor: #2c3e50;
+
+$blogPostItemTitleFontSize: 20px;
+$blogPostItemTitleFontColor: #474a4b;
+$blogPostItemHoverTitleFontColor: #f9ab1f;
+$blogPostItemSummaryFontColor: #a6a8a8;
+$blogPostItemHoverSummaryFontColor: #000000;
+$blogPostItemSummaryFontSize: 14px;
+$blogPostItemStuffFontStyle: italic;
+$blogPostItemStuffFontSize: 12px;
+
+
+:export {
+  topNavBarHeight: $topNavBarHeight;
+  bottomFootHeight: $bottomFootHeight;
+  topNavBgColor: $topNavBgColor;
+  bottomFootBgColor: $bottomFootBgColor;
+  blogPostItemTitleFontSize: $blogPostItemTitleFontSize;
+  blogPostItemTitleFontColor: $blogPostItemTitleFontColor;
+  blogPostItemHoverTitleFontColor: $blogPostItemHoverTitleFontColor;
+  blogPostItemSummaryFontSize: $blogPostItemSummaryFontSize;
+  blogPostItemSummaryFontColor: $blogPostItemSummaryFontColor;
+  blogPostItemHoverSummaryFontColor: $blogPostItemHoverSummaryFontColor;
+  blogPostItemStuffFontStyle: $blogPostItemStuffFontStyle;
+  blogPostItemStuffFontSize: $blogPostItemStuffFontSize;
+}

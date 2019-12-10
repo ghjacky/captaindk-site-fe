@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAQ,iCAAsB;AAE5B,aAAS;EACP,gBAAgB,EAAE,SAAS;;ACF7B,UAAM;EACJ,gBAAgB,EAAE,OAAO;EACzB,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,aAAa,EAAE,CAAC",
+"sources": ["../components/Content/_Content.scss","../components/Foot/_Foot.scss"],
+"names": [],
+"file": "index.css"
+}

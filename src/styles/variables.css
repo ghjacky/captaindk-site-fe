@@ -1,0 +1,15 @@
+:export {
+  topNavBarHeight: 60px;
+  bottomFootHeight: 60px;
+  topNavBgColor: #545c64;
+  bottomFootBgColor: #2c3e50;
+  blogPostItemTitleFontSize: 20px;
+  blogPostItemTitleFontColor: #474a4b;
+  blogPostItemHoverTitleFontColor: #f9ab1f;
+  blogPostItemSummaryFontSize: 14px;
+  blogPostItemSummaryFontColor: #a6a8a8;
+  blogPostItemHoverSummaryFontColor: #000000;
+  blogPostItemStuffFontStyle: italic;
+  blogPostItemStuffFontSize: 12px; }
+
+/*# sourceMappingURL=variables.css.map */
