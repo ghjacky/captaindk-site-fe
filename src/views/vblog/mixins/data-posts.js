@@ -3,7 +3,7 @@ export const MixinsDataPosts = {
   data() {
     return {
       route: this.$route,
-      postItems: [
+      latestPosts: [
         {
           id: 'uuid01',
           title: '文章一标题',

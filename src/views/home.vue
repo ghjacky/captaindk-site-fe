@@ -11,7 +11,7 @@
 <script>
   import Layout from '@/components/Layout'
   import { setNavBarActiveIndex } from '@/utils/cookie'
-  import { navIndexMap } from '@/variables'
+  import { navIndexMap } from '@/router/nav'
 
   export default {
     name: 'Home',

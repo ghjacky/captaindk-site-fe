@@ -11,12 +11,12 @@
                text-color="#fff" active-text-color="#ffd04b" style="display: inline-block">
         <template v-for="navItem in navRoutesList">
           <el-submenu v-if="hasChildren(navItem)" :key="navItem.index" :index="navItem.index">
-            <template slot="title">{{ navItem.name }}</template>
+            <template slot="title">{{ navItem.meta.title }}</template>
             <el-menu-item v-for="subNavItem in navItem.children" :key="subNavItem.index" :index="subNavItem.index" :route="{path: subNavItem.path}">
-              {{ subNavItem.name }}
+              {{ subNavItem.meta.title }}
             </el-menu-item>
           </el-submenu>
-          <el-menu-item v-else :key="navItem.index" :index="navItem.index" :route="{path: navItem.path}">{{ navItem.name }}</el-menu-item>
+          <el-menu-item v-else :key="navItem.index" :index="navItem.index" :route="{path: navItem.path}">{{ navItem.meta.title }}</el-menu-item>
         </template>
       </el-menu>
     </el-col>
@@ -28,7 +28,7 @@
 
 <script>
   import { setNavBarActiveIndex, getNavBarActiveIndex, removeNavBarActiveIndex } from '@/utils/cookie'
-  import { navRoutesList } from '@/variables'
+  import { navRoutesList } from '@/router/nav'
 
   export default {
     name: 'Navbar',

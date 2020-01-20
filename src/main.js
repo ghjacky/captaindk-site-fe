@@ -9,6 +9,11 @@ import locale from 'element-ui/lib/locale/lang/zh-CN' // lang i18n
 import Router from 'vue-router'
 import '@/styles/index.scss'
 import '@/permission'
+import VueSimplemde from 'vue-simplemde'
+import 'simplemde/dist/simplemde.min.css'
+
+Vue.component('vue-simplemde', VueSimplemde)
+
 const originalPush = Router.prototype.push
 Router.prototype.push = function push(location) {
   return originalPush.call(this, location).catch(err => err)
@@ -17,7 +22,6 @@ Router.prototype.push = function push(location) {
 Vue.config.productionTip = false
 // register module
 Vue.use(ElementUI, { locale })
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

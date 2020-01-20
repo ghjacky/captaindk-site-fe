@@ -1,0 +1,54 @@
+@import "./variables.scss";
+
+#app {
+  .el-card__body {
+    padding: 0;
+  }
+
+  .post_item_wrapper:hover {
+    border-top: solid 2px $blogPostItemHoverTitleFontColor;
+
+    .post_title {
+      color: $blogPostItemHoverTitleFontColor;
+    }
+
+    .post_summary {
+      color: $blogPostItemHoverSummaryFontColor;
+    }
+  }
+
+  .post_item:hover {
+    cursor: pointer;
+  }
+
+  .post_item_wrapper {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+    border-top: solid 2px white;
+
+    .post_title {
+      font-size: $blogPostItemTitleFontSize;
+      color: $blogPostItemTitleFontColor;
+    }
+
+    .post_summary {
+      margin: 0 auto;
+      padding: 20px 0 0;
+      width: 100%;
+      border-bottom: solid 1px lightgray;
+      font-size: $blogPostItemSummaryFontSize;
+      color: $blogPostItemSummaryFontColor;
+    }
+
+    .post_stuff {
+      margin: 10px auto 0;
+      font-style: $blogPostItemStuffFontStyle;
+      font-size: $blogPostItemStuffFontSize;
+
+      .post_tag {
+        margin-right: 10px;
+      }
+    }
+  }
+}

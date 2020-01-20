@@ -8,7 +8,7 @@
 
 <script>
   import { setNavBarActiveIndex } from '@/utils/cookie'
-  import { navIndexMap } from '@/variables'
+  import { navIndexMap } from '@/router/nav'
 
   export default {
     name: 'Res_tvs',

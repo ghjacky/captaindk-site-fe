@@ -1,6 +1,6 @@
 <template>
-  <el-card class="post_item">
-    <div class="post" @click="handlePostItemClick">
+  <el-card class="post_item_wrapper">
+    <div class="post_item" @click="handlePostItemClick">
       <div class="post_title">
         <span>{{ title }}</span>
       </div>
@@ -15,6 +15,12 @@
       </el-tag>
       <el-tag class="post_tag" size="mini" type="info">
         <span>{{ date }}</span>
+      </el-tag>
+      <el-tag class="post_tag" size="mini" type="info">
+        <span>作者: {{ author }}</span>
+      </el-tag>
+      <el-tag class="post_tag" size="mini" type="info">
+        <span>阅读次数: {{ readCount }}</span>
       </el-tag>
     </div>
   </el-card>
@@ -44,6 +50,14 @@
       date: {
         type: String,
         default: moment().format('YYYY-MM-DD HH:mm:ss')
+      },
+      author: {
+        type: String,
+        default: 'GMY'
+      },
+      readCount: {
+        type: Number,
+        default: 0
       }
     },
     data() {
@@ -58,56 +72,5 @@
 </script>
 
 <style scoped lang="scss">
-  @import "~@/styles/variables.scss";
-
-  .el-card__body {
-    padding: 0;
-  }
-
-  .post_item:hover {
-    border-top: solid 2px $blogPostItemHoverTitleFontColor;
-
-    .post_title {
-      color: $blogPostItemHoverTitleFontColor;
-    }
-
-    .post_summary {
-      color: $blogPostItemHoverSummaryFontColor;
-    }
-  }
-
-  .post:hover {
-    cursor: pointer;
-  }
-
-  .post_item {
-    width: 100%;
-    text-align: left;
-    margin-bottom: 20px;
-    border-top: solid 2px white;
-
-    .post_title {
-      font-size: $blogPostItemTitleFontSize;
-      color: $blogPostItemTitleFontColor;
-    }
-
-    .post_summary {
-      margin: 0 auto;
-      padding: 20px 0 0;
-      width: 100%;
-      border-bottom: solid 1px lightgray;
-      font-size: $blogPostItemSummaryFontSize;
-      color: $blogPostItemSummaryFontColor;
-    }
-
-    .post_stuff {
-      margin: 10px auto 0;
-      font-style: $blogPostItemStuffFontStyle;
-      font-size: $blogPostItemStuffFontSize;
-
-      .post_tag {
-        margin-right: 10px;
-      }
-    }
-  }
+  @import "~@/styles/vblog.scss";
 </style>

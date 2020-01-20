@@ -19,8 +19,8 @@
   import Layout from '@/components/Layout'
   import bsidebar from '@/views/vblog/components/bsidebar'
   import { setNavBarActiveIndex } from '@/utils/cookie'
-  import { navIndexMap } from '@/variables'
-  import posts from '@/views/vblog/posts'
+  import { navIndexMap } from '@/router/nav'
+  import posts from '@/views/vblog/vlog'
   import post from '@/views/vblog/post'
 
   export default {

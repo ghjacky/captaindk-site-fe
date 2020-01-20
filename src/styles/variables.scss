@@ -12,6 +12,7 @@ $blogPostItemSummaryFontSize: 14px;
 $blogPostItemStuffFontStyle: italic;
 $blogPostItemStuffFontSize: 12px;
 
+$adminSidebarBgColor: $topNavBgColor;
 
 :export {
   topNavBarHeight: $topNavBarHeight;
@@ -26,4 +27,5 @@ $blogPostItemStuffFontSize: 12px;
   blogPostItemHoverSummaryFontColor: $blogPostItemHoverSummaryFontColor;
   blogPostItemStuffFontStyle: $blogPostItemStuffFontStyle;
   blogPostItemStuffFontSize: $blogPostItemStuffFontSize;
+  adminSidebarBgColor: $adminSidebarBgColor;
 }
