@@ -1,1 +1,3 @@
-export const serviceAddr = 'http://127.0.0.1:8080'
+export const serviceAddr = 'http://192.168.73.45:8000'
+export const apiPrefix = '/api/v1'
+export const serviceName = 'captaindk'

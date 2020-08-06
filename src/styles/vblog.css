@@ -1,0 +1,48 @@
+:export {
+  topNavBarHeight: 60px;
+  bottomFootHeight: 60px;
+  topNavBgColor: #545c64;
+  bottomFootBgColor: #2c3e50;
+  blogPostItemTitleFontSize: 20px;
+  blogPostItemTitleFontColor: #474a4b;
+  blogPostItemHoverTitleFontColor: #f9ab1f;
+  blogPostItemSummaryFontSize: 14px;
+  blogPostItemSummaryFontColor: #a6a8a8;
+  blogPostItemHoverSummaryFontColor: #000000;
+  blogPostItemStuffFontStyle: italic;
+  blogPostItemStuffFontSize: 12px;
+  adminSidebarBgColor: #545c64; }
+
+#app .el-card__body {
+  padding: 0; }
+#app .post_item_wrapper:hover {
+  border-top: solid 2px #f9ab1f; }
+  #app .post_item_wrapper:hover .post_title {
+    color: #f9ab1f; }
+  #app .post_item_wrapper:hover .post_summary {
+    color: #000000; }
+#app .post_item:hover {
+  cursor: pointer; }
+#app .post_item_wrapper {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 20px;
+  border-top: solid 2px white; }
+  #app .post_item_wrapper .post_title {
+    font-size: 20px;
+    color: #474a4b; }
+  #app .post_item_wrapper .post_summary {
+    margin: 0 auto;
+    padding: 20px 0 0;
+    width: 100%;
+    border-bottom: solid 1px lightgray;
+    font-size: 14px;
+    color: #a6a8a8; }
+  #app .post_item_wrapper .post_stuff {
+    margin: 10px auto 0;
+    font-style: italic;
+    font-size: 12px; }
+    #app .post_item_wrapper .post_stuff .post_tag {
+      margin-right: 10px; }
+
+/*# sourceMappingURL=vblog.css.map */

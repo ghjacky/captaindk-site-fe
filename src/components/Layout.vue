@@ -40,7 +40,7 @@
 
   .el-main {
     height: calc(100% - #{$topNavBarHeight} - #{$bottomFootHeight});
-    padding: 0;
+    /*padding: 0;*/
     width: 100%;
 
     .left_sidebar, .right_sidebar {

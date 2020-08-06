@@ -11,6 +11,9 @@ import '@/styles/index.scss'
 import '@/permission'
 import VueSimplemde from 'vue-simplemde'
 import 'simplemde/dist/simplemde.min.css'
+import contentmenu from 'v-contextmenu'
+import 'v-contextmenu/dist/index.css'
+import store from '@/store'
 
 Vue.component('vue-simplemde', VueSimplemde)
 
@@ -22,10 +25,12 @@ Router.prototype.push = function push(location) {
 Vue.config.productionTip = false
 // register module
 Vue.use(ElementUI, { locale })
+Vue.use(contentmenu)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
