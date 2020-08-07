@@ -1,9 +1,5 @@
 <template>
   <el-container class="admin_posts">
-    <el-aside id="blog_category">
-      <el-tree :data="categories" node-key="name" :props="treeProps" @node-click="handleCategoryClick" @node-contextmenu="handleRightClickNode"
-               default-expand-all :expand-on-click-node="false"></el-tree>
-    </el-aside>
     <el-main>
       <el-button size="mini" type="primary" style="display: block; margin-bottom: 10px" @click="handleClick">写文章</el-button>
       <el-table :data="posts" border size="mini" :cell-style="handleCellStyle" :header-cell-style="handleHeaderCellStyle">
@@ -18,11 +14,6 @@
       </el-table>
     </el-main>
     <add-post v-if="dialogArticleVisible" :visible.sync="dialogArticleVisible" :title="dialogArticleTitle"></add-post>
-    <v-contextmenu ref="contextmenu" v-model="currentNode">
-      <v-contextmenu-item @click="handleAddCategory">添加分类</v-contextmenu-item>
-      <v-contextmenu-item @click="handleEditCategory(currentNode)">编辑分类</v-contextmenu-item>
-      <v-contextmenu-item @click="handleDeleteCategory(currentNode)">删除分类</v-contextmenu-item>
-    </v-contextmenu>
     <dialog-category v-if="dialogCategoryVisible" :visible.sync="dialogCategoryVisible" :title="dialogCategoryTitle"
                      :oper-type="dialogCategoryOperType" :category="category"></dialog-category>
   </el-container>
@@ -30,7 +21,7 @@
 
 <script>
   import AddPost from '@/views/admin/components/dialogs/post'
-  import dialogCategory from './components/dialogs/category'
+  import dialogCategory from '@/views/admin/components/dialogs/category'
   import { deleteCategory, fetchArticles, fetchCategories, deleteArticle } from '@/api/admin'
 
   export default {
@@ -63,7 +54,6 @@
           pageSizes: [10, 20, 30],
           limit: 10
         },
-        categories: [],
         treeProps: {
           children: 'children',
           label: 'name'
@@ -93,10 +83,6 @@
       this.fetchArticles()
     },
     methods: {
-      handleRightClickNode(event, currentNode) {
-        this.currentNode = currentNode
-        this.$refs.contextmenu.show({ left: event.pageX, top: event.pageY })
-      },
       // 获取分类树
       fetchCategories() {
         fetchCategories(true).then(res => {
